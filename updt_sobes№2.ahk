@@ -1,12 +1,7 @@
 updurl := "https://github.com/dryunja2112/AHK-SOBES-2/blob/master/SOBES%20Proverka.exe?raw=true"
-SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nНастраиваем систему обновления.
 RegRead, put2, HKEY_CURRENT_USER, SoftWare\SAMP, put2
-sleep, 5000
-SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nСкачиваем обновленную версию.
+SplashTextOn, , 60,РђРІС‚РѕРѕР±РЅРѕРІР»РµРЅРёРµ, РћР±РЅРѕРІР»РµРЅРёРµ. РћР¶РёРґР°Р№С‚Рµ..`nРћР±РЅРѕРІР»СЏРµРј СЃРєСЂРёРїС‚ РґРѕ РІРµСЂСЃРёРё %vupd%!
 URLDownloadToFile, %updurl%, %put2%
-SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nЗапускаем обновленную версию.
 sleep, 3000
 run % put2
-sleep, 1000
-FileDelete, %a_temp%/updt_sobes№2.ahk
 ExitApp
